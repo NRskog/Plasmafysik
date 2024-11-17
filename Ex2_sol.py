@@ -97,7 +97,7 @@ def make_plots(N_for_error, list_of_error, phi_sol, phi_exact, x_discrete, x_con
  
     ax[2].plot(x_discrete, phi_sol, color="red", label="Numerical solution", marker="o")
     ax[2].plot(x_cont, phi_exact, color="blue", label="Analytical solution")
-    ax[2].set_title("Numerical vs Analytical solution")
+    ax[2].set_title(f"Numerical vs Analytical solution with N = {N}")
     ax[2].set_xlabel("x")
     ax[2].set_ylabel("Solution")
     ax[2].legend()
@@ -111,7 +111,7 @@ def make_plots(N_for_error, list_of_error, phi_sol, phi_exact, x_discrete, x_con
 #######
 a = 0
 b = 2*np.pi
-N = 40
+N = 5
 N_values = [10, 20, 40, 80, 160, 320, 1000]
 
 h = (b - a)/ N
